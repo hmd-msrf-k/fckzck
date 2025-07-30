@@ -176,6 +176,14 @@ static NSString *_new_WABuildHash() {
 
 %end
 
+%hook WAMessage
+
+-(bool)needsLocalNotification {
+    return true;
+}
+
+%end
+
 /*
 WACreateUserAgent
 WASubmitMessageSendEvent
